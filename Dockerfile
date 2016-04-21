@@ -6,7 +6,7 @@ MAINTAINER Yueheng He <heyuehengtaichi@gmail.com>
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
-RUN sudo apt-get update && \
+RUN sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/*  && sudo apt-get update && \
     sudo apt-get install -y libexpat1-dev \
     curl \
     git \
